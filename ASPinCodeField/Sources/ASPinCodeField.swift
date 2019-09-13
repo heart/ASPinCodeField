@@ -63,7 +63,13 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
             self._inputAccessoryView = newValue
         }
     }
-    
+
+    public var fillColor: UIColor = .white {
+        didSet {
+            digitsView.forEach { $0.layer.backgroundColor = fillColor.cgColor  }
+        }
+    }
+
     public var textColor: UIColor = .black {
         didSet {
             digitsView.forEach { $0.label.textColor = textColor }
