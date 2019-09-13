@@ -153,6 +153,8 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
             digitView.label.font = textFont
             digitView.layer.borderColor = borderColor.cgColor
             digitView.layer.cornerRadius = cornerRadius
+            digitView.layer.backgroundColor = fillColor
+            
             digitsView.append(digitView)
             self.stackView.addArrangedSubview(digitView)
         }
