@@ -30,6 +30,7 @@ pinCodeView.textColor = UIColor.black
 pinCodeView.cornerRadius = 4
 pinCodeView.itemsSpacing = 8
 pinCodeView.textFont = .boldSystemFont(ofSize: 20)
+pinCodeView.fillColor = UIColor.orange
 ```
 
 Delegate and DataSource

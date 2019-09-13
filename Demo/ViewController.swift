@@ -17,6 +17,7 @@ class ViewController: UIViewController, ASPinCodeFieldDelegate, ASPinCodeFieldDa
     
     @IBOutlet weak var storyboardPinField: ASPinCodeField! {
         didSet {
+            storyboardPinField.fillColor = UIColor.orange
             storyboardPinField.delegate = self
             storyboardPinField.dataSource = self
             storyboardPinField.borderColor = UIColor.lightGray
