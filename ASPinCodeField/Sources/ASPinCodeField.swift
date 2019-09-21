@@ -153,8 +153,8 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
             digitView.label.font = textFont
             digitView.layer.borderColor = borderColor.cgColor
             digitView.layer.cornerRadius = cornerRadius
-            digitView.layer.backgroundColor = fillColor
-            
+            digitView.layer.backgroundColor = fillColor.cgColor
+
             digitsView.append(digitView)
             self.stackView.addArrangedSubview(digitView)
         }
@@ -190,10 +190,9 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
             assertionFailure("DataSource property is not set")
             return true
         }
-        
-        if self.digitsView.count <= numberOfDigits {
-            self.digitsView[digits.count].state = .focus
-        }
+
+        digits = ""
+        self.digitsView[0].state = .focus
         
         return super.becomeFirstResponder()
     }
